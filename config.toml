@@ -1,0 +1,19 @@
+[Eth]
+NetworkId = 1
+SyncMode = "fast"
+
+[Node]
+DataDir = "/geth/data"
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPVirtualHosts = ["*"]
+HTTPModules = ["net", "web3", "eth", "shh"]
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSModules = ["*"]
+WSModules = ["net", "web3", "eth", "shh"]
+
+[Node.P2P]
+ListenAddr = ":30303"
+NAT = "extip:127.0.0.1"

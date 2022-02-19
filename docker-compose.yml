@@ -1,0 +1,17 @@
+version: "3.0"
+  
+services:
+  geth:
+    image: geth
+    build:
+      context: .
+    container_name: geth
+    ports:
+      - 8545:8545
+      - 8546:8546
+      - 30303:30303
+    restart: always
+    volumes:
+      - ./data:/geth/data
+      - ./config.toml:/geth/config.toml
+    command: --config /geth/config.toml
