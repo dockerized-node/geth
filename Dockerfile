@@ -1,7 +1,4 @@
-# Build Geth in a stock Go builder container
-FROM golang:alpine as builder
-
-RUN apk add --no-cache wget curl make gcc musl-dev linux-headers
+FROM golang:bullseye
 
 RUN wget -P /go-ethereum https://github.com/$(curl -s -L https://github.com/ethereum/go-ethereum/releases/latest | egrep -o 'ethereum/go-ethereum/archive/(.*).tar.gz')
 RUN cd /go-ethereum \

@@ -1,6 +1,6 @@
 [Eth]
 NetworkId = 1
-SyncMode = "fast"
+SyncMode = "snap"
 
 [Node]
 DataDir = "/geth/data"
@@ -8,12 +8,11 @@ HTTPHost = "0.0.0.0"
 HTTPPort = 8545
 HTTPCors = ["*"]
 HTTPVirtualHosts = ["*"]
-HTTPModules = ["net", "web3", "eth", "shh"]
+HTTPModules = ["web3", "eth", "eth"]
 WSHost = "0.0.0.0"
 WSPort = 8546
-WSModules = ["*"]
-WSModules = ["net", "web3", "eth", "shh"]
+WSOrigins = ["*"]
+WSModules = ["web3", "eth", "eth"]
 
 [Node.P2P]
 ListenAddr = ":30303"
-NAT = "extip:127.0.0.1"
