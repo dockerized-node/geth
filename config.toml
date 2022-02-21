@@ -8,11 +8,11 @@ HTTPHost = "0.0.0.0"
 HTTPPort = 8545
 HTTPCors = ["*"]
 HTTPVirtualHosts = ["*"]
-HTTPModules = ["web3", "eth", "eth"]
+HTTPModules = ["web3", "eth", "net"]
 WSHost = "0.0.0.0"
 WSPort = 8546
 WSOrigins = ["*"]
-WSModules = ["web3", "eth", "eth"]
+WSModules = ["web3", "eth", "net"]
 
 [Node.P2P]
 ListenAddr = ":30303"

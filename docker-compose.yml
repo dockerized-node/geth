@@ -14,4 +14,4 @@ services:
     volumes:
       - ./data:/geth/data
       - ./config.toml:/geth/config.toml
-    command: --config /geth/config.toml
+    command: --config /geth/config.toml --nat extip:127.0.0.1
