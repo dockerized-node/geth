@@ -7,9 +7,6 @@ RUN cd /go-ethereum \
     && make geth \
     && cp ./build/bin/geth /usr/local/bin/ \
     && chmod +x /usr/local/bin/geth
-
 RUN rm -rf /go-ethereum
 
-WORKDIR /
-
-ENTRYPOINT [ "geth" ]
+ENTRYPOINT [ "/usr/local/bin/geth" ]
